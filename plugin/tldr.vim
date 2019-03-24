@@ -15,9 +15,11 @@ set cpo&vim
 
 " Get os type
 if has("win64") || has("win32") || has("win16")
-  let s:os = "Windows"
+  let s:os = "win"
+elseif has("mac")
+  let s:os = "mac"
 else
-  let s:os = substitute(system('uname'), '\n', '', '')
+  let s:os = "unix"
 endif
 
 " Global Variables {{{
@@ -36,11 +38,11 @@ if !exists("g:tldr_source_zip_url")
 endif
 
 if !exists("g:tldr_enabled_categories")
-  if s:os == "Darwin"
+  if s:os == "mac"
     let categories = ["osx"]
-  elseif s:os == "Windows":
+  elseif s:os == "win"
     let categories = ["windows"]
-  elseif s:os == "Linux"
+  elseif s:os == "unix"
     let categories = ["linux"]
   else
     let categories = []
