@@ -1,0 +1,110 @@
+*tldr.txt*	tldr client for vim. Bwahahaha!!                              v0.1
+*tldr*
+===============================================================================
+__/\\\\\\\\\\\\\\\__/\\\______________/\\\\\\\\\\\\_______/\\\\\\\\\_____
+ _\///////\\\/////__\/\\\_____________\/\\\////////\\\___/\\\///////\\\___
+  _______\/\\\_______\/\\\_____________\/\\\______\//\\\_\/\\\_____\/\\\___
+   _______\/\\\_______\/\\\_____________\/\\\_______\/\\\_\/\\\\\\\\\\\/____
+    _______\/\\\_______\/\\\_____________\/\\\_______\/\\\_\/\\\//////\\\____
+     _______\/\\\_______\/\\\_____________\/\\\_______\/\\\_\/\\\____\//\\\___
+      _______\/\\\_______\/\\\_____________\/\\\_______/\\\__\/\\\_____\//\\\__
+       _______\/\\\_______\/\\\\\\\\\\\\\\\_\/\\\\\\\\\\\\/___\/\\\______\//\\\
+        _______\///________\///////////////__\////////////_____\///________\///
+===============================================================================
+CONTENTS                                                        *tldr-contents*
+
+    1. Intro........................................|tldr-intro|
+    2. Options......................................|tldr-options|
+    3. Commands.....................................|tldr-commands|
+    4. Input Formats................................|tldr-input-formats|
+
+===============================================================================
+INTRO                                                              *tldr-intro*
+
+The tldr client form vim.
+For more information, please refer to https://github.com/tldr-pages/tldr.
+
+===============================================================================
+OPTIONS                                                          *tldr-options*
+
+Overview:~
+  |tldr_directory_path|................The directory name of tldr.
+  |tldr_saved_zip_path|................Temporary location for downloading zip.
+  |tldr_source_zip_url|................Zip URL on GitHub.
+  |tldr_enabled_categories|............List of enabled tldr categories.
+
+-------------------------------------------------------------------------------
+Detailed descriptions and default values:~
+
+                                                      *'g:tldr_directory_path'*
+Use this option to change the tldr directory path: >
+  let g:tldr_directory_path = '~/.cache/tldr'
+<
+
+                                                      *'g:tldr_saved_zip_path'*
+Use this to change the temporary location for downloading zip: >
+  let g:tldr_saved_zip_path = '~/.cache/tldr-source.zip'
+<
+
+                                                      *'g:tldr_source_zip_url'*
+Change this to set the tldr source zip url: >
+  let g:tldr_source_zip_url =
+   \ 'https://github.com/tldr-pages/tldr/archive/master.zip'
+<
+
+                                                  *'g:tldr_enabled_categories'*
+Use this to set the enabled tldr categories, it can be a list composed of
+"common", "linux", "osx", "sunos" and "windows": >
+  let g:tldr_enabled_categories = ["common"]
+<
+
+===============================================================================
+COMMANDS                                                        *tldr-commands*
+
+:Tldr [command]
+   Open the help file of given command.
+
+   You can use <tab> to auto-complete the [command] when typing it.
+
+:TldrUpdateDocs
+   Get or update tldr docs from source.
+
+===============================================================================
+INPUT FORMATS                                              *tldr-input-formats*
+
+Formats for inputting command in the prompt:~
+
+a) Simple string.
+
+    E.g. 'man', 'vim'
+
+===============================================================================
+CREDITS                                                          *tldr-credits*
+
+Developed by Steve Lemuel <wlemuel@hotmail.com>. Distributed under MIT license.
+
+Project's homepage:   https://github.com/wlemuel/vim-tldr
+Git repository:       https://github.com/wlemuel/vim-tldr
+
+===============================================================================
+APPENDIX                                                        *tldr-appendix*
+
+I'd be glad to receive patches, comments and your considered criticism.
+Have fun with vim-tldr!
+
+===============================================================================
+CHANGELOG                                                      *tldr-changelog*
+
+v0.1 - 2019/03/24
+    + Ability to open the help file according to the input command.
+    + New commands: |:Tldr|,
+                    |:TldrUpdateDocs|
+    + New options: |g:tldr_directory_path|,
+                   |g:tldr_saved_zip_path|,
+                   |g:tldr_source_zip_url|,
+                   |g:tldr_enabled_categories|
+
+First public release: 2019/03/24
+
+===============================================================================
+vim:ft=help:et:ts=2:sw=2:sts=2:norl
