@@ -1,4 +1,4 @@
-*tldr.txt*	tldr client for vim. Bwahahaha!!                          v0.2
+*tldr.txt*	tldr client for vim. Bwahahaha!!                          v0.3
 *tldr*
 ===============================================================================
 __/\\\\\\\\\\\\\\\__/\\\______________/\\\\\\\\\\\\_______/\\\\\\\\\_____
@@ -107,6 +107,9 @@ Have fun with vim-tldr!
 
 ===============================================================================
 CHANGELOG                                                      *tldr-changelog*
+
+v0.3 - 2019/03/25
+    + Bug fix: open too many empty buffer in neovim
 
 v0.2 - 2019/03/25
     + Open help doc in a seperate window.
