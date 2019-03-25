@@ -32,6 +32,12 @@ for popular package managers:
     let g:tldr_directory_path = '~/.cache/tldr'
     ```
 
+* Change the tldr split window type `["horizontal", "vertical", "tab"]`, Default is "vertical":
+
+    ```vim
+    let g:tldr_split_type = 'horizontal'
+    ```
+
 Check `:help tldr-options` for other options.
 
 ## Appendix

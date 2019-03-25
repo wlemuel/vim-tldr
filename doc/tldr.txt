@@ -1,4 +1,4 @@
-*tldr.txt*	tldr client for vim. Bwahahaha!!                              v0.1
+*tldr.txt*	tldr client for vim. Bwahahaha!!                          v0.2
 *tldr*
 ===============================================================================
 __/\\\\\\\\\\\\\\\__/\\\______________/\\\\\\\\\\\\_______/\\\\\\\\\_____
@@ -17,6 +17,7 @@ CONTENTS                                                        *tldr-contents*
     2. Options......................................|tldr-options|
     3. Commands.....................................|tldr-commands|
     4. Input Formats................................|tldr-input-formats|
+    5. Mappings.....................................|tldr-mappings|
 
 ===============================================================================
 INTRO                                                              *tldr-intro*
@@ -32,6 +33,7 @@ Overview:~
   |tldr_saved_zip_path|................Temporary location for downloading zip.
   |tldr_source_zip_url|................Zip URL on GitHub.
   |tldr_enabled_categories|............List of enabled tldr categories.
+  |tldr_split_type|....................Type of split window.
 
 -------------------------------------------------------------------------------
 Detailed descriptions and default values:~
@@ -57,6 +59,11 @@ Use this to set the enabled tldr categories, it can be a list composed of
 "common", "linux", "osx", "sunos" and "windows": >
   let g:tldr_enabled_categories = ["common"]
 <
+                                                          *'g:tldr_split_type'*
+Use this option to control the split window of tldr, it can be one of
+"horizontal", "vertical" and "tab". Default is "vertical": >
+  let g:tldr_split_type = "horizontal"
+<
 
 ===============================================================================
 COMMANDS                                                        *tldr-commands*
@@ -79,6 +86,12 @@ a) Simple string.
     E.g. 'man', 'vim'
 
 ===============================================================================
+MAPPINGS                                                        *tldr-mappings*
+
+q
+   Default |Normal| mode mapping to close current split window.
+
+===============================================================================
 CREDITS                                                          *tldr-credits*
 
 Developed by Steve Lemuel <wlemuel@hotmail.com>. Distributed under MIT license.
@@ -94,6 +107,10 @@ Have fun with vim-tldr!
 
 ===============================================================================
 CHANGELOG                                                      *tldr-changelog*
+
+v0.2 - 2019/03/25
+    + Open help doc in a seperate window.
+    + New options: |g:tldr_split_type|
 
 v0.1 - 2019/03/24
     + Ability to open the help file according to the input command.
