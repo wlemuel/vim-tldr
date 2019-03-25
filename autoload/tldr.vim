@@ -18,7 +18,7 @@ set cpo&vim
 
 let s:commands_list = []
 let s:command_abspath = ''
-let s:buffer_name = '[tldr]'
+let s:buffer_name = '__tldr__'
 
 " }}}
 
@@ -67,6 +67,8 @@ endf
 
 fu! s:LoadText(filepath)
   setlocal modifiable
+  " erase buffer content
+  norm! ggdG
   silent exec 'r '.a:filepath
   call s:RemoveUselessPatterns()
 
@@ -97,11 +99,11 @@ fu! s:GetNewOrExistingWindow()
     endif
     if &filetype != 'tldr'
       if g:tldr_split_type == 'vertical'
-        vnew
+        exec 'vnew '.s:buffer_name
       elseif g:tldr_split_type == 'tab'
-        tabnew
+        exec 'tabnew '.s:buffer_name
       else
-        new
+        exec 'new '.s:buffer_name
       endif
     endif
   endif
@@ -143,7 +145,7 @@ fu! tldr#run(cmd)
       call s:Print(a:cmd . ' does not exist!')
     else
       call s:GetNewOrExistingWindow()
-      call s:SetBufferName()
+      " call s:SetBufferName()
       call s:LoadText(path)
     endif
   endif
