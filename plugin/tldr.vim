@@ -33,7 +33,7 @@ if !exists("g:tldr_saved_zip_path")
 endif
 
 if !exists("g:tldr_source_zip_url")
-  let g:tldr_source_zip_url = 
+  let g:tldr_source_zip_url =
         \ "https://github.com/tldr-pages/tldr/archive/master.zip"
 endif
 
@@ -51,9 +51,14 @@ if !exists("g:tldr_enabled_categories")
   let g:tldr_enabled_categories = add(categories, "common")
 endif
 
+if !exists("g:tldr_split_type")
+  " ['horizontal', 'vertical', 'tab']
+  let g:tldr_split_type = "vertical"
+endif
+
 " }}}
 
-command! -nargs=0 TldrUpdateDocs call tldr#updatedocs()
+command! -nargs=0 TldrUpdateDocs call tldr#update_docs()
 command! -nargs=1 -bar -complete=custom,tldr#complete Tldr call tldr#run(<q-args>)
 
 let g:loaded_tldr = 1

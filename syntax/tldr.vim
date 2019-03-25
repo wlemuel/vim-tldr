@@ -30,7 +30,6 @@ syn match tldrArgs  '-\w\+' contained
 
 syn match tldrSymbols '^[#>-] ' contained
 syn match tldrSymbols '`$' contained
-syn match tldrSymbols '{{\|}}' contained
 
 hi def link tldrTitle Underlined
 hi def link tldrIntro Constant
