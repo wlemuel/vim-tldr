@@ -76,7 +76,7 @@ fu! s:LoadText(filepath)
 endf
 
 fu! s:RemoveUselessPatterns()
-  silent exec '%s/{{\|}}//g'
+  silent exec '%s/{{\|}}//ge'
 endf
 
 fu! s:GetNewOrExistingWindow()
