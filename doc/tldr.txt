@@ -1,5 +1,4 @@
 *tldr.txt*	tldr client for vim. Bwahahaha!!                          v0.3
-*tldr*
 ===============================================================================
 __/\\\\\\\\\\\\\\\__/\\\______________/\\\\\\\\\\\\_______/\\\\\\\\\_____
  _\///////\\\/////__\/\\\_____________\/\\\////////\\\___/\\\///////\\\___
@@ -22,8 +21,8 @@ CONTENTS                                                        *tldr-contents*
 ===============================================================================
 INTRO                                                              *tldr-intro*
 
-The tldr client form vim.
-For more information, please refer to https://github.com/tldr-pages/tldr.
+*tldr* or *vim-tldr* is the tldr client for vim.
+For more information, please refer to http://tldr-pages.github.io/.
 
 ===============================================================================
 OPTIONS                                                          *tldr-options*

@@ -1,5 +1,5 @@
 # vim-tldr
-tldr client for vim/neovim
+[tldr](http://tldr-pages.github.io/) client for vim/neovim
 
 ## Requirements
 
