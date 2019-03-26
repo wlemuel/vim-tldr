@@ -20,7 +20,7 @@ setlocal noswapfile
 
 " mappings {{{1
 
-nnoremap <silent> <buffer> q :exec "q!"<CR>
+nnoremap <silent> <buffer> q :bd<CR>
 
 " }}}
 
