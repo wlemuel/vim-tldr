@@ -38,6 +38,25 @@ for popular package managers:
     let g:tldr_split_type = 'horizontal'
     ```
 
+* Set language, Default is English:
+
+    The supported language list until 2019-03-27.
+
+    | option     | language |
+    |------------|----------|
+    | en         | English  |
+    | zh         | Chinese  |
+    | it         | Italian  |
+    | ta         | Tamil    |
+    | pt-BR      | Brazilian Portuguese|
+
+    If the tldr of specific language is missing, English will be the fallback.  
+    The contribution to tldr project is welcome, please refer to [Tldr Contributing](https://github.com/tldr-pages/tldr#contributing) for details.
+
+    ```vim
+    let g:tldr_language = 'zh'
+    ```
+
 Check `:help tldr-options` for other options.
 
 ## Appendix

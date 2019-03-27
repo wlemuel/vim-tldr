@@ -2,7 +2,6 @@
 " File:          autoload/tldr/debug.vim
 " Description:   debug utils for tldr
 " Author:        Steve Lemuel <wlemuel@hotmail.com>
-" Version:       0.3
 " =============================================================================
 
 if exists('g:loaded_tldr_debug') && g:loaded_tldr_debug

@@ -3,7 +3,6 @@
 " File:          syntax/tldr.vim
 " Description:   syntax file for tldr
 " Author:        Steve Lemuel <wlemuel@hotmail.com>
-" Version:       0.3
 " =============================================================================
 
 " For version 5.x: Clear all syntax items

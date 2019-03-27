@@ -1,4 +1,4 @@
-*tldr.txt*	tldr client for vim. Bwahahaha!!                          v0.3
+*tldr.txt*	tldr client for vim. Bwahahaha!!                          v0.4
 ===============================================================================
 __/\\\\\\\\\\\\\\\__/\\\______________/\\\\\\\\\\\\_______/\\\\\\\\\_____
  _\///////\\\/////__\/\\\_____________\/\\\////////\\\___/\\\///////\\\___
@@ -33,6 +33,7 @@ Overview:~
   |tldr_source_zip_url|................Zip URL on GitHub.
   |tldr_enabled_categories|............List of enabled tldr categories.
   |tldr_split_type|....................Type of split window.
+  |tldr_language|......................The language option for tldr
 
 -------------------------------------------------------------------------------
 Detailed descriptions and default values:~
@@ -62,6 +63,26 @@ Use this to set the enabled tldr categories, it can be a list composed of
 Use this option to control the split window of tldr, it can be one of
 "horizontal", "vertical" and "tab". Default is "vertical": >
   let g:tldr_split_type = "horizontal"
+<
+
+                                                            *'g:tldr_language'*
+Use this option to set tldr language. The default language is English.
+
+options dictionary
+{
+  "zh":     Chinese,
+  "it":     Italian,
+  "ta":     Tamil,
+  "pt-BR":  Brazilian Portuguese,
+}
+
+If the tldr of specific language is missing, English will be the fallback.
+The contribution to tldr project is welcome, please refer to
+
+https://github.com/tldr-pages/tldr#contributing
+
+Default is "en": >
+  let g:tldr_language = "zh"
 <
 
 ===============================================================================
@@ -106,6 +127,10 @@ Have fun with vim-tldr!
 
 ===============================================================================
 CHANGELOG                                                      *tldr-changelog*
+
+v0.4 - 2019/03/27
+    + Feature: switch language
+    + New options: |g:tldr_language|
 
 v0.3 - 2019/03/25
     + Bug fix: open too many empty buffer in neovim

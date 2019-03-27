@@ -2,7 +2,6 @@
 " File:          plugin/tldr.vim
 " Description:   tldr client
 " Author:        Steve Lemuel <wlemuel@hotmail.com>
-" Version:       0.3
 " =============================================================================
 
 if exists("g:loaded_tldr") || &cp || v:version < 700

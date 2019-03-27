@@ -2,7 +2,6 @@
 " File:          autoload/tldr.vim
 " Description:   tldr client
 " Author:        Steve Lemuel <wlemuel@hotmail.com>
-" Version:       0.3
 " =============================================================================
 
 if exists("g:autoloaded_tldr") || &cp || v:version < 700
