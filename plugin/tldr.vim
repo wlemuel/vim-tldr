@@ -56,6 +56,14 @@ if !exists("g:tldr_split_type")
   let g:tldr_split_type = "vertical"
 endif
 
+if !exists("g:tldr_language")
+  let g:tldr_language = "en"
+endif
+
+if !exists("g:tldr_debug")
+  let g:tldr_debug = 0
+endif
+
 " }}}
 
 command! -nargs=0 TldrUpdateDocs call tldr#update_docs()

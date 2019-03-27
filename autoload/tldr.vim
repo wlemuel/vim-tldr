@@ -19,6 +19,8 @@ set cpo&vim
 let s:commands_list = []
 let s:command_abspath = ''
 let s:buffer_name = '__tldr__'
+let s:fallback_language_folder = expand(g:tldr_directory_path).'/pages'
+let s:language_folder = ''
 
 " }}}
 
@@ -38,9 +40,9 @@ endf
 
 fu! s:PrepareCommands()
   if isdirectory(expand(g:tldr_directory_path))
+    call s:CheckPagePath()
     for subdir in g:tldr_enabled_categories
-      let files = globpath(g:tldr_directory_path . '/pages/' . subdir,
-            \ '*.md', 0, 1)
+      let files = globpath(printf('%s/%s', s:language_folder, subdir), '*.md', 0, 1)
       let s:commands_list += map(files, 'fnamemodify(v:val, ":t:r")')
     endfor
   else
@@ -50,19 +52,28 @@ endf
 
 fu! s:GetCmdFilePath(cmd)
   let path = ''
+  call s:CheckPagePath()
+
   for subdir in g:tldr_enabled_categories
-    let abspath = printf('%s/pages/%s/%s.md',
-          \ expand(g:tldr_directory_path), subdir, a:cmd)
+    let abspath = printf('%s/%s/%s.md', s:language_folder, subdir, a:cmd)
     if filereadable(abspath)
       let path = abspath
+      break
     endif
   endfor
 
-  return path
-endf
+  " fallback default language
+  if empty(path)
+    for subdir in g:tldr_enabled_categories
+      let abspath = printf('%s/%s/%s.md', s:fallback_language_folder, subdir, a:cmd)
+      if filereadable(abspath)
+        let path = abspath
+        break
+      endif
+    endfor
+  endif
 
-fu! s:SetBufferName()
-  silent exec 'edit '.s:buffer_name
+  return path
 endf
 
 fu! s:LoadText(filepath)
@@ -78,7 +89,19 @@ fu! s:LoadText(filepath)
 endf
 
 fu! s:RemoveUselessPatterns()
-  silent exec '%s/{{\|}}//ge'
+  silent exec '%s/{{\|{\|}}\|}/ /ge'
+endf
+
+fu! s:CheckPagePath()
+  let page_dir = printf('%s/pages.%s', 
+        \ expand(g:tldr_directory_path), g:tldr_language)
+  call tldr#debug#print('[CheckPagePath] '.page_dir)
+  if isdirectory(page_dir)
+    let s:language_folder = page_dir
+  else
+    let s:language_folder = s:fallback_language_folder
+  endif
+  call tldr#debug#print('[CheckPagePath] '.s:language_folder)
 endf
 
 fu! s:GetNewOrExistingWindow()
