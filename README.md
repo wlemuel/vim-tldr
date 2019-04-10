@@ -7,6 +7,10 @@
 * unzip
 * curl
 
+## Screenshot
+
+![image](https://user-images.githubusercontent.com/1510976/55878262-a9b34700-5bce-11e9-9330-8ef94578d3bf.png)
+
 ## Installation
 
 vim-tldr follows the standard runtime path structure. Below are some helper lines
