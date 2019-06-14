@@ -19,10 +19,13 @@ for popular package managers:
 
 -   [Vim 8 packages](http://vimhelp.appspot.com/repeat.txt.html#packages)  
     -   `git clone https://github.com/wlemuel/vim-tldr.git ~/.vim/pack/plugins/start/vim-tldr`  
+
 -   [Pathogen](https://github.com/tpope/vim-pathogen)  
     -   `git clone https://github.com/wlemuel/vim-tldr.git ~/.vim/bundle/vim-tldr`  
+
 -   [vim-plug](https://github.com/junegunn/vim-plug)  
     -   `Plug 'wlemuel/vim-tldr'`  
+
 -   [Vundle](https://github.com/VundleVim/Vundle.vim)  
     -   `Plugin 'wlemuel/vim-tldr'`  
 
