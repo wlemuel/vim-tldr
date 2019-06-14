@@ -1,5 +1,7 @@
 # vim-tldr
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/e9eacee4a3cf469b96847aaf288d0794)](https://app.codacy.com/app/wlemuel/vim-tldr?utm_source=github.com&utm_medium=referral&utm_content=wlemuel/vim-tldr&utm_campaign=Badge_Grade_Dashboard)
+
 [tldr](http://tldr-pages.github.io/) client for vim/neovim
 
 ## Requirements
