@@ -52,15 +52,18 @@ for popular package managers:
 
 -   Set language, Default is English:  
 
-      The supported language list until 2019-03-27.
+      The supported language list until 2020-01-17.
 
     | option | language             |
     | ------ | -------------------- |
     | en     | English              |
-    | zh     | Chinese              |
+    | es     | Spanish              |
+    | fr     | French               |
     | it     | Italian              |
-    | ta     | Tamil                |
+    | ko     | Korean               |
     | pt-BR  | Brazilian Portuguese |
+    | ta     | Tamil                |
+    | zh     | Chinese              |
 
       If the tldr of specific language is missing, English will be the fallback.  
       The contribution to tldr project is welcome, please refer to [Tldr Contributing](https://github.com/tldr-pages/tldr#contributing) for details.
