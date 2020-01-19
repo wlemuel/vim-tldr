@@ -12,7 +12,7 @@
 
 ## Screenshot
 
-![image](https://user-images.githubusercontent.com/1510976/55878262-a9b34700-5bce-11e9-9330-8ef94578d3bf.png)
+![image](https://user-images.githubusercontent.com/1510976/72673994-7fbb7900-3aac-11ea-96fa-6745c5dc1efb.png)
 
 ## Installation
 

@@ -27,7 +27,7 @@ syn match tldrKeyword '^`\w\+' contained contains=tldrKwSymbl
 syn match tldrKwSymbl '^`' contained
 syn match tldrArgs  '-\w\+' contained
 
-syn match tldrSymbols '^[#>-] ' contained
+syn match tldrSymbols '^[#>] ' contained
 syn match tldrSymbols '`$' contained
 
 hi def link tldrTitle Underlined
