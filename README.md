@@ -52,7 +52,7 @@ for popular package managers:
 
 -   Set language, Default is English:  
 
-      The supported language list until 2021-01-13.
+    The supported language list until 2021-01-13.
 
     | option | language             |
     | ------ | -------------------- |
@@ -82,8 +82,8 @@ for popular package managers:
     | zh     | Chinese              |
     | zh_TW  | Traditional Chinese  |
 
-      If the tldr of specific language is missing, English will be the fallback.  
-      The contribution to tldr project is welcome, please refer to [Tldr Contributing](https://github.com/tldr-pages/tldr#contributing) for details.
+    If the tldr of specific language is missing, English will be the fallback.  
+    The contribution to tldr project is welcome, please refer to [Tldr Contributing](https://github.com/tldr-pages/tldr#contributing) for details.
 
     ```vim
     let g:tldr_language = 'zh'
