@@ -61,6 +61,7 @@ for popular package managers:
     | de     | German               |
     | en     | English              |
     | es     | Spanish              |
+    | fa     | Persian              |
     | fr     | French               |
     | hbs    | Serbo-Croatian       |
     | hi     | Hindi                |
