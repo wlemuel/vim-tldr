@@ -6,9 +6,9 @@
 
 ## Requirements
 
--   Vim 7.0+  
--   unzip  
--   curl  
+-   Vim 7.0+
+-   unzip
+-   curl
 
 ## Screenshot
 
@@ -19,22 +19,22 @@
 vim-tldr follows the standard runtime path structure. Below are some helper lines
 for popular package managers:
 
--   [Vim 8 packages](http://vimhelp.appspot.com/repeat.txt.html#packages)  
-    -   `git clone https://github.com/wlemuel/vim-tldr.git ~/.vim/pack/plugins/start/vim-tldr`  
+-   [Vim 8 packages](http://vimhelp.appspot.com/repeat.txt.html#packages)
+    -   `git clone https://github.com/wlemuel/vim-tldr.git ~/.vim/pack/plugins/start/vim-tldr`
 
--   [Pathogen](https://github.com/tpope/vim-pathogen)  
-    -   `git clone https://github.com/wlemuel/vim-tldr.git ~/.vim/bundle/vim-tldr`  
+-   [Pathogen](https://github.com/tpope/vim-pathogen)
+    -   `git clone https://github.com/wlemuel/vim-tldr.git ~/.vim/bundle/vim-tldr`
 
--   [vim-plug](https://github.com/junegunn/vim-plug)  
-    -   `Plug 'wlemuel/vim-tldr'`  
+-   [vim-plug](https://github.com/junegunn/vim-plug)
+    -   `Plug 'wlemuel/vim-tldr'`
 
--   [Vundle](https://github.com/VundleVim/Vundle.vim)  
-    -   `Plugin 'wlemuel/vim-tldr'`  
+-   [Vundle](https://github.com/VundleVim/Vundle.vim)
+    -   `Plugin 'wlemuel/vim-tldr'`
 
 ## Basic Usage
 
--   Run `:Tldr [command]` to find the tldr of command.  
--   Run `:TldrUpdateDocs` to get or update tldr docs.  
+-   Run `:Tldr [command]` to find the tldr of command.
+-   Run `:TldrUpdateDocs` to get or update tldr docs.
 
 ## Basic Options
 
@@ -44,18 +44,20 @@ for popular package managers:
     let g:tldr_directory_path = '~/.cache/tldr'
     ```
 
--   Change the tldr split window type `["horizontal", "vertical", "tab"]`, Default is "vertical":  
+-   Change the tldr split window type `["horizontal", "vertical", "tab"]`, Default is "vertical":
 
     ```vim
     let g:tldr_split_type = 'horizontal'
     ```
 
--   Set language, Default is English:  
+-   Set language, Default is English:
 
-    The supported language list until 2021-01-13.
+    The supported language list until 2021-12-26.
 
     | option | language             |
-    | ------ | -------------------- |
+    |--------|----------------------|
+    | ar     | Arabic               |
+    | bn     | Bengali              |
     | bs     | Bosnian              |
     | da     | Danish               |
     | de     | German               |
@@ -63,27 +65,32 @@ for popular package managers:
     | es     | Spanish              |
     | fa     | Persian              |
     | fr     | French               |
-    | hbs    | Serbo-Croatian       |
     | hi     | Hindi                |
     | id     | Indonesian           |
     | it     | Italian              |
     | ja     | Japanese             |
     | ko     | Korean               |
     | ml     | Malayalam            |
+    | ne     | Nepali               |
     | nl     | Dutch                |
     | no     | Norwegian            |
     | pl     | Polish               |
     | pt_BR  | Brazilian Portuguese |
     | pt_PT  | Portuguese           |
+    | ro     | Romanian             |
     | ru     | Russian              |
+    | sh     | Serbo-Croatian       |
+    | sr     | Serbian              |
     | sv     | Swedish              |
     | ta     | Tamil                |
     | th     | Thai                 |
     | tr     | Turkish              |
+    | uk     | Ukrainian            |
+    | uz     | Uzbek                |
     | zh     | Chinese              |
     | zh_TW  | Traditional Chinese  |
 
-    If the tldr of specific language is missing, English will be the fallback.  
+    If the tldr of specific language is missing, English will be the fallback.
     The contribution to tldr project is welcome, please refer to [Tldr Contributing](https://github.com/tldr-pages/tldr#contributing) for details.
 
     ```vim
