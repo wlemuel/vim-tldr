@@ -12,6 +12,14 @@ endif
 let s:save_cpo = &cpo
 set cpo&vim
 
+" Get os type
+if has("win64") || has("win32") || has("win16")
+  let s:os = "win"
+elseif has("mac")
+  let s:os = "mac"
+else
+  let s:os = "unix"
+endif
 
 " Script Variables {{{
 
@@ -133,16 +141,32 @@ endf
 
 fu! tldr#update_docs()
   if s:CheckUnzip()
-    if isdirectory(g:tldr_directory_path)
-      silent execute '!rm -rf ' . g:tldr_directory_path
+    if isdirectory(expand(g:tldr_directory_path))
+      if s:os == "win"
+        silent execute '!rmdir /Q /S "' . expand(g:tldr_directory_path) . '"'
+      else
+        silent execute '!rm -rf "' . expand(g:tldr_directory_path) . '"'
+      endif
     endif
 
     call s:Print("start to download tldr zip")
-    silent exec '!curl -fLo ' . g:tldr_saved_zip_path . ' --create-dirs '
-          \ . g:tldr_source_zip_url
-    silent exec '!unzip -o -d ~/.cache/ ' . g:tldr_saved_zip_path
-    silent exec '!rm -rf ' . g:tldr_saved_zip_path
-    silent exec '!mv ~/.cache/tldr-master ' . g:tldr_directory_path
+
+    if s:os == "win"
+      silent exec '!powershell -c "Invoke-WebRequest -Uri \'' . g:tldr_source_zip_url
+      \ . '\' -OutFile \'' . expand(g:tldr_saved_zip_path) . '\'"'
+      silent exec '!powershell -c "Expand-Archive -Path \'' . expand(g:tldr_saved_zip_path)
+      \ . '\' -DestinationPath \'' . expand("~/.cache/") . '\'"'
+      silent exec '!rmdir /Q /S "' . expand(g:tldr_saved_zip_path) . '"'
+      silent exec '!move /Y ' . expand("~/.cache/tldr-master") . ' '
+      \ . expand(g:tldr_directory_path)
+    else
+      silent exec '!curl -fLo ' . g:tldr_saved_zip_path . ' --create-dirs '
+      \ . g:tldr_source_zip_url
+      silent exec '!unzip -o -d ~/.cache/ ' . g:tldr_saved_zip_path
+      silent exec '!rm -rf ' . g:tldr_saved_zip_path
+      silent exec '!mv ~/.cache/tldr-master ' . g:tldr_directory_path
+    endif
+
     call s:Print("Now tldr docs is updated!")
   endif
 endf
