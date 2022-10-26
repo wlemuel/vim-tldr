@@ -156,7 +156,7 @@ fu! tldr#update_docs()
       \ . '\' -OutFile \'' . expand(g:tldr_saved_zip_path) . '\'"'
       silent exec '!powershell -c "Expand-Archive -Path \'' . expand(g:tldr_saved_zip_path)
       \ . '\' -DestinationPath \'' . expand("~/.cache/") . '\'"'
-      silent exec '!rmdir /Q /S "' . expand(g:tldr_saved_zip_path) . '"'
+      silent exec '!del /S /F "' . expand(g:tldr_saved_zip_path) . '"'
       silent exec '!move /Y ' . expand("~/.cache/tldr-master") . ' '
       \ . expand(g:tldr_directory_path)
     else
