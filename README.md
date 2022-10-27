@@ -7,8 +7,8 @@
 ## Requirements
 
 -   Vim 7.0+
--   unzip
--   curl
+-   unzip (*unix)
+-   curl (*unix)
 
 ## Screenshot
 
