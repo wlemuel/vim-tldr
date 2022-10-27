@@ -152,10 +152,10 @@ fu! tldr#update_docs()
     call s:Print("start to download tldr zip")
 
     if s:os == "win"
-      silent exec '!powershell -c "Invoke-WebRequest -Uri \'' . g:tldr_source_zip_url
-      \ . '\' -OutFile \'' . expand(g:tldr_saved_zip_path) . '\'"'
-      silent exec '!powershell -c "Expand-Archive -Path \'' . expand(g:tldr_saved_zip_path)
-      \ . '\' -DestinationPath \'' . expand("~/.cache/") . '\'"'
+      silent exec '!powershell -c "Invoke-WebRequest -Uri ''' . g:tldr_source_zip_url
+      \ . ''' -OutFile ''' . expand(g:tldr_saved_zip_path) . '''"'
+      silent exec '!powershell -c "Expand-Archive -Path ''' . expand(g:tldr_saved_zip_path)
+      \ . ''' -DestinationPath  ''' . expand("~/.cache/") . '''"'
       silent exec '!del /S /F "' . expand(g:tldr_saved_zip_path) . '"'
       silent exec '!move /Y ' . expand("~/.cache/tldr-master") . ' '
       \ . expand(g:tldr_directory_path)
