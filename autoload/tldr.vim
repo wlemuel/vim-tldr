@@ -157,14 +157,14 @@ fu! tldr#update_docs()
       silent exec '!powershell -c "Expand-Archive -Path ''' . expand(g:tldr_saved_zip_path)
       \ . ''' -DestinationPath  ''' . expand("~/.cache/") . '''"'
       silent exec '!del /S /F "' . expand(g:tldr_saved_zip_path) . '"'
-      silent exec '!move /Y ' . expand("~/.cache/tldr-master") . ' '
+      silent exec '!move /Y ' . expand("~/.cache/tldr-main") . ' '
       \ . expand(g:tldr_directory_path)
     else
       silent exec '!curl -fLo ' . g:tldr_saved_zip_path . ' --create-dirs '
       \ . g:tldr_source_zip_url
       silent exec '!unzip -o -d ~/.cache/ ' . g:tldr_saved_zip_path
       silent exec '!rm -rf ' . g:tldr_saved_zip_path
-      silent exec '!mv ~/.cache/tldr-master ' . g:tldr_directory_path
+      silent exec '!mv ~/.cache/tldr-main ' . g:tldr_directory_path
     endif
 
     call s:Print("Now tldr docs is updated!")

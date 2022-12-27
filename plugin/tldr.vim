@@ -33,7 +33,7 @@ endif
 
 if !exists("g:tldr_source_zip_url")
   let g:tldr_source_zip_url =
-        \ "https://github.com/tldr-pages/tldr/archive/master.zip"
+        \ "https://github.com/tldr-pages/tldr/archive/main.zip"
 endif
 
 if !exists("g:tldr_enabled_categories")

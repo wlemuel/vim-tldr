@@ -51,7 +51,7 @@ Use this to change the temporary location for downloading zip: >
                                                       *'g:tldr_source_zip_url'*
 Change this to set the tldr source zip url: >
   let g:tldr_source_zip_url =
-   \ 'https://github.com/tldr-pages/tldr/archive/master.zip'
+   \ 'https://github.com/tldr-pages/tldr/archive/main.zip'
 <
 
                                                   *'g:tldr_enabled_categories'*
